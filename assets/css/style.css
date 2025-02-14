@@ -1,4 +1,212 @@
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  display: flex;
+}
+
+
+main {
+  background: yellow;
+  display: flex;
+  flex-direction: row;
+}
+
+.container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin: 20px;
+}
+
+
+
+header {
+  background-color: grey;
+  padding: 5px;
+}
+
+#sidebar {
+  width: 200px;
+  background: green;
+}
+
+.container {
+  background-color: pink;
+  width: 100%;
+}
+
+.bovenbalk {
+  display: flex;
+  background-color: orange;
+  /* padding:  5px; */
+  justify-content: space-between;
+}
+
+.bovenbalk .menuRight {
+  padding: 10px;
+}
+
+.bovenbalk .menuLeft {
+  padding: 10px;
+}
+
+
+/* .rechts{
+  display: flex;
+  justify-content: right;
+  background-color: brown;
+} */
+
+.onderbalk {
+  display: flex;
+  background-color: palegreen;
+  justify-content: space-between;
+}
+
+
+.onderbalk .menuRight {
+  padding: 100px;
+  padding-top: 25px;
+}
+
+.onderbalk .menuLeft {
+  padding: 10px;
+  /* min-width: 100px; */
+  /* Minimum breedte van de afbeelding */
+}
+
+.onderbalk img{
+  width: 65px;
+  min-width: 65px;
+  background-color: #45a049;
+}
+
+.onderbalk .menuRight {
+  background-color: #4CAF50;
+  /* Groene achtergrondkleur */
+  color: white;
+  /* Witte tekstkleur */
+  padding: 10px 20px;
+  /* Optionele padding voor knopgrootte */
+  /* border: none;  Geen rand rond de knop */
+  cursor: pointer;
+  /* Cursor verandert naar handje */
+  justify-content: space-between;
+  height: 40px;
+  margin-right: 10px;
+  /* Ruimte tussen knoppen (10px tussen elke knop) */
+  margin-top: 22px;
+}
+
+.menuRight:hover {
+  background-color: #45a049;
+  /* Donkergroene achtergrondkleur wanneer je hover */
+  color: black;
+  /* Zwarte tekstkleur wanneer je hover */
+}
+
+
+.onderbalk input{
+  height: 40px;
+  margin-top: 22px;
+  margin-right: 10px;
+}
+
+
+
+.item {
+  width: 150px;
+  height: 300px;
+  background-color: white;
+  padding: 1em;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+
+
+.item img {
+  height: 50%;
+  width: auto;
+}
+
+
+
+.product {
+  width: 150px;
+  height: 300px;
+  background-color: white;
+  padding: 1em;
+  font-weight: 700;
+  color: black;
+  text-align: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  flex-wrap: wrap;
+  transition: box-shadow 0.3s ease;
+}
+
+.product:hover {
+  box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.6);
+  /* Grotere schaduw bij hover */
+  color: black;
+  /* Zwarte tekstkleur */
+}
+
+.onder {
+  display: flex;
+  flex-direction: column;
+  height: 140px;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+
+.linksOnder {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  /* padding: 5px; */
+  height: 140px;
+  width: 50%;
+  background-color: blueviolet;
+}
+
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+  margin-top: 20px;
+  height: 40px;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
 }
