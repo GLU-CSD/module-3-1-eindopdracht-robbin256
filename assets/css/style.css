@@ -19,14 +19,7 @@ main {
   flex-direction: row;
 }
 
-.container {
-  display: flex;
-  justify-content: space-evenly;
-  flex-direction: row;
-  flex-wrap: wrap;
-  padding: 20px;
-  margin: 20px;
-}
+
 
 
 
@@ -123,30 +116,23 @@ header {
 }
 
 
-
-.item {
-  width: 150px;
-  height: 300px;
-  background-color: white;
-  padding: 1em;
-  font-weight: 700;
-  color: black;
-  text-align: center;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-
-
 .item img {
   height: 50%;
   width: auto;
 }
 
 
+.container {
+  display: grid;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  /* justify-content: space-evenly; */
+  /* flex-wrap: wrap; */
+  padding: 20px;
+  margin: 20px;
+}
 
 .product {
-  width: 150px;
   height: 300px;
   background-color: white;
   padding: 1em;
@@ -155,9 +141,10 @@ header {
   text-align: center;
   border: 2px solid black;
   border-radius: 10px;
-  flex-wrap: wrap;
   transition: box-shadow 0.3s ease;
+  margin-bottom: 10px; /* Zorgt voor ruimte tussen de rijen */
 }
+
 
 .product:hover {
   box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.6);
@@ -209,4 +196,11 @@ header {
 .topnav a.active {
   background-color: #04AA6D;
   color: white;
+}
+
+
+
+.footer{
+  display: flex;
+  justify-content: space-around;
 }
