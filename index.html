@@ -56,11 +56,12 @@
             <option value="English">English</option>
             <option value="中國人">中國人</option>
             <option value="-- --- .-. ... . / -.-. --- -.. .">-- --- .-. ... . / -.-. --- -.. .</option>
-          </select>        </div>
+          </select>
+        </div>
         <div style="display:flex; margin-right:50px; background-color: plum;">
           <div class="menuRight">Mijn account</div>
           <div class="menuRight">|</div>
-          <div class="menuRight">afrekenen</div>
+          <a href="form.html" class="menuRight">afrekenen</a>
           <div class="menuRight">|</div>
           <div class="menuRight">Uitloggen</div>
         </div>
@@ -85,7 +86,9 @@
           <input type="text" placeholder="Search..." />
           <!-- <button type="submit">🔍</button> -->
           <button class="menuRight">Vergelijk</button>
-          <button class="menuRight">Winkelwagen</button>
+          <button class="menuRight">Winkelwagen
+            <div id="productAmount">1</div>
+          </button>
         </div>
       </div>
     </header>
@@ -99,20 +102,36 @@
         </div>
         <div class="filter">
           <h2>Colors</h2>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> White</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> Black </label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> blue</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> gold</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> green</label><br>
-          <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-          <label for="vehicle3"> All</label><br>
+          <input type="checkbox" id="white" name="color" value="White">
+          <label for="white"> White</label><br>
+          <input type="checkbox" id="black" name="color" value="Black">
+          <label for="black"> Black</label><br>
+          <input type="checkbox" id="blue" name="color" value="Blue">
+          <label for="blue"> Blue</label><br>
+          <input type="checkbox" id="gold" name="color" value="Gold">
+          <label for="gold"> Gold</label><br>
+          <input type="checkbox" id="green" name="color" value="Green">
+          <label for="green"> Green</label><br>
+          <input type="checkbox" id="all" name="color" value="All">
+          <label for="all"> All</label><br>
+          
         </div>
-        <div class="filter"></div>
+        <div class="filter">
+          <h2>Models</h2>
+          <input type="checkbox" id="Iphone 11" name="Iphone 11" value="Iphone 11">
+          <label for="Iphone 11"> Iphone 11</label><br>
+          <input type="checkbox" id="Iphone 12" name="Iphone 12" value="Iphone 12">
+          <label for="Iphone 12"> Iphone 12</label><br>
+          <input type="checkbox" id="Iphone 13" name="Iphone 13" value="Iphone 13">
+          <label for="Iphone 13"> Iphone 13</label><br>
+          <input type="checkbox" id="Iphone 14" name="Iphone 14" value="Iphone 14">
+          <label for="Iphone 14"> Iphone 14</label><br>
+          <input type="checkbox" id="Iphone 15" name="Iphone 15" value="Iphone 15">
+          <label for="Iphone 15"> Iphone 15</label><br>
+          <input type="checkbox" id="Iphone 16" name="Iphone 16" value="Iphone 16">
+          <label for="Iphone 16"> Iphone 16</label><br>
+          
+        </div>
         <div class="filter"></div>
       </div>
       <div class="container">
@@ -128,7 +147,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -144,7 +163,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -160,7 +179,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -176,7 +195,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -192,7 +211,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -208,7 +227,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -224,7 +243,7 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
@@ -240,38 +259,38 @@
               <p>14,99 </p>
             </div>
             <div>
-              <button>Add to card</button>
+              <button class="addProduct">Add to card</button>
             </div>
           </div>
         </div>
       </div>
-      
+
     </main>
     <div class="footer">
-        <div>
-          <b>Veilig betalen</b><br>
-          <p>betaal in Veiligheid met onze partners</p>
-        </div>
-          
-        <div><b>leveringskosten</b></div>
-        <div>
-          <b>Klantenservice</b>
-          <ul>
-            <li>wachtwoord vergeten</li>
-            <li>Veilige betaling</li>
-            <li>levering</li>
-            <li>Annuleren, retourneren en ruilen</li>
-          </ul>
-        </div>
-        <div>
-          <b>Over ons</b><br>
-          <ul>
-            <li>Telefoon: 1234567890 </li>
-            <li>Veilige betaling</li>
-            <li>Algemene voorwaarden</li>
-            <li>Privacy beleid</li>
-          </ul>
-        </div>
+      <div>
+        <b>Veilig betalen</b><br>
+        <p>betaal in Veiligheid met onze partners</p>
+      </div>
+
+      <div><b>leveringskosten</b></div>
+      <div>
+        <b>Klantenservice</b>
+        <ul>
+          <li>wachtwoord vergeten</li>
+          <li>Veilige betaling</li>
+          <li>levering</li>
+          <li>Annuleren, retourneren en ruilen</li>
+        </ul>
+      </div>
+      <div>
+        <b>Over ons</b><br>
+        <ul>
+          <li>Telefoon: 1234567890 </li>
+          <li>Veilige betaling</li>
+          <li>Algemene voorwaarden</li>
+          <li>Privacy beleid</li>
+        </ul>
+      </div>
     </div>
   </div>
 

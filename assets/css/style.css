@@ -96,6 +96,14 @@ header {
 
 .bovenbalk .menuRight {
   padding: 10px;
+  display: flex;
+}
+
+#productAmount{
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: red;
 }
 
 .bovenbalk .menuLeft {

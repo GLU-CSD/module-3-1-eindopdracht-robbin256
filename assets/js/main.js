@@ -9,3 +9,16 @@ slider.oninput = function() {
         output.innerHTML = this.value;
     }
 }
+
+
+var productAmount = document.getElementById("productAmount")
+
+var buttons = document.querySelectorAll(".addProduct"),
+  count = 0;
+
+buttons.forEach(function (button) {
+  button.addEventListener("click", function () {
+    count += 1;
+    productAmount.innerHTML = count;
+  });
+});
