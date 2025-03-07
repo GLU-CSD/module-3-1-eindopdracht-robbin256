@@ -6,42 +6,38 @@
 body {
   margin: 0;
   padding: 0;
+  background-color: #f5f5f7;
+  color: #333;
 }
 
 .content {
   display: flex;
 }
 
-
 main {
-  background: yellow;
+  background: #ffffff;
   display: flex;
   flex-direction: row;
 }
 
-
-
-
-
 header {
-  background-color: grey;
+  background-color: #000;
+  color: white;
   padding: 5px;
 }
 
 #sidebar {
   width: 300px;
-  background: green;
+  background: #e0e0e0;
 }
 
 .filter{
-  background-color: lightblue;
-  border: black solid 5px;
+  background-color: #f5f5f7;
+  border: #ccc solid 2px;
   width: 150px;
   height: 150px;
   margin-bottom: 50px;
-
 }
-
 
 .slidecontainer {
   width: 100%;
@@ -68,29 +64,26 @@ header {
   appearance: none;
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: #000;
   cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 25px;
   height: 25px;
-  background: #04AA6D;
+  background: #000;
   cursor: pointer;
 }
 
-
-
-
 .container {
-  background-color: pink;
+  background-color: #ffffff;
   width: 100%;
 }
 
 .bovenbalk {
   display: flex;
-  background-color: orange;
-  /* padding:  5px; */
+  background-color: #333;
+  color: white;
   justify-content: space-between;
 }
 
@@ -110,19 +103,11 @@ header {
   padding: 10px;
 }
 
-
-/* .rechts{
-  display: flex;
-  justify-content: right;
-  background-color: brown;
-} */
-
 .onderbalk {
   display: flex;
-  background-color: palegreen;
+  background-color: #f5f5f7;
   justify-content: space-between;
 }
-
 
 .onderbalk .menuRight {
   padding: 100px;
@@ -131,40 +116,28 @@ header {
 
 .onderbalk .menuLeft {
   padding: 10px;
-  /* min-width: 100px; */
-  /* Minimum breedte van de afbeelding */
 }
 
 .onderbalk img{
   width: 65px;
   min-width: 65px;
-  background-color: #45a049;
 }
 
 .onderbalk .menuRight {
-  background-color: #4CAF50;
-  /* Groene achtergrondkleur */
+  background-color: #000;
   color: white;
-  /* Witte tekstkleur */
   padding: 10px 20px;
-  /* Optionele padding voor knopgrootte */
-  /* border: none;  Geen rand rond de knop */
   cursor: pointer;
-  /* Cursor verandert naar handje */
   justify-content: space-between;
   height: 40px;
   margin-right: 10px;
-  /* Ruimte tussen knoppen (10px tussen elke knop) */
   margin-top: 22px;
 }
 
 .menuRight:hover {
-  background-color: #45a049;
-  /* Donkergroene achtergrondkleur wanneer je hover */
-  color: black;
-  /* Zwarte tekstkleur wanneer je hover */
+  background-color: #555;
+  color: white;
 }
-
 
 .onderbalk input{
   height: 40px;
@@ -172,17 +145,13 @@ header {
   margin-right: 10px;
 }
 
-
 .item img {
   height: 50%;
   width: auto;
 }
 
-
 .container {
   display: flex;
-  grid-template-rows: 20% 20% 20% 20% 20%;
-  grid-template-columns: 20% 20% 20% 20% 20%;
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 20px;
@@ -191,24 +160,29 @@ header {
 }
 
 .product {
+  max-width: 200px;
+  max-height: 334px;
+  min-width: 190px;
   height: 300px;
   background-color: white;
   padding: 1em;
   font-weight: 700;
   color: black;
   text-align: center;
-  border: 2px solid black;
+  border: 2px solid #ccc;
   border-radius: 10px;
   transition: box-shadow 0.3s ease;
-  margin-bottom: 10px; /* Zorgt voor ruimte tussen de rijen */
+  margin-bottom: 10px;
 }
 
+.description{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 11px;
+}
 
 .product:hover {
-  box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.6);
-  /* Grotere schaduw bij hover */
+  box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.1);
   color: black;
-  /* Zwarte tekstkleur */
 }
 
 .onder {
@@ -219,21 +193,18 @@ header {
   padding: 5px;
 }
 
-
 .linksOnder {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding: 5px; */
   height: 140px;
   width: 50%;
-  background-color: blueviolet;
+  background-color: #e0e0e0;
 }
-
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #000;
   margin-top: 20px;
   height: 40px;
 }
@@ -252,16 +223,14 @@ header {
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
+  background-color: #333;
   color: white;
 }
-
-
 
 .footer{
   display: flex;
   justify-content: space-around;
+  background-color: #000;
+  color: white;
+  padding: 10px;
 }
-
-
-

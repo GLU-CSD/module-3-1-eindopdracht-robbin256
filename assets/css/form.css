@@ -1,0 +1,104 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+ }
+
+#container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 500px;
+}
+
+h2, h3 {
+    color: #007bff;
+}
+
+p {
+    font-size: 14px;
+    color: #555;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.bold {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+
+
+            
+.color-picker {
+    border: none;
+    width: 40px; /* Standaardbreedte aanpassen indien nodig */
+    height: 40px;
+    padding: 0;
+    cursor: pointer;
+}
+
+
+.radio-group {
+    display: flex;
+    gap: 20px; /* Ruimte tussen de opties */
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Ruimte tussen de radio button en de tekst */
+    cursor: pointer;
+    /* width: 500px; */
+    white-space: nowrap; /* Zorgt dat de tekst niet onder de radio button komt */
+
+}
+
+
+.name-fields {
+    display: flex;
+    gap: 5px;
+}
+
+.name-fields input {
+    flex: 1;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.highlight {
+    color: #ff6600;
+    font-weight: bold;
+}
