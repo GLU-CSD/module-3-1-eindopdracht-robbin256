@@ -1,26 +1,3 @@
-<!doctype html>
-<html class="no-js" lang="">
-
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title></title>
-  <link rel="stylesheet" href="assets/css/style1.css">
-  <link rel="stylesheet" href="assets/css/style2.css">
-  <meta name="description" content="">
-
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:image:alt" content="">
-
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" href="/icon.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="icon.png">
-
-  <meta name="theme-color" content="#fafafa">
-</head>
 <!DOCTYPE html>
 <html class="no-js" lang="">
 
@@ -86,9 +63,11 @@
           <input type="text" placeholder="Search..." />
           <!-- <button type="submit">🔍</button> -->
           <button class="menuRight">Vergelijk</button>
-          <button class="menuRight">Winkelwagen
-            <div id="productAmount">1</div>
-          </button>
+          <a href="winkelwagen.html">
+            <button class="menuRight">Winkelwagen
+                <div id="productAmount">1</div>
+            </button>
+        </a>
         </div>
       </div>
     </header>
@@ -114,7 +93,7 @@
           <label for="green"> Green</label><br>
           <input type="checkbox" id="all" name="color" value="All">
           <label for="all"> All</label><br>
-          
+
         </div>
         <div class="filter">
           <h2>Models</h2>
@@ -130,7 +109,7 @@
           <label for="Iphone 15"> Iphone 15</label><br>
           <input type="checkbox" id="Iphone 16" name="Iphone 16" value="Iphone 16">
           <label for="Iphone 16"> Iphone 16</label><br>
-          
+
         </div>
         <div class="filter"></div>
       </div>
@@ -476,8 +455,45 @@
           </div>
         </div>
       </div>
-      
+      <script>
+        // Variabele om het winkelwagentje op te slaan
+        let cart = [];
 
+        // Functie om een product toe te voegen aan het winkelwagentje
+        function addToCart(productName, price) {
+            // Voeg het product toe aan de cart array
+            cart.push({ name: productName, price: price });
+
+            // Update de winkelwagentje op de pagina
+            updateCart();
+        }
+
+        // Functie om de winkelwagentje weer te geven
+        function updateCart() {
+            // Haal het winkelwagentje element en de totalPrice span op
+            const cartItems = document.getElementById('cartItems');
+            const totalPriceElement = document.getElementById('totalPrice');
+
+            // Maak de lijst van producten leeg voordat we deze bijwerken
+            cartItems.innerHTML = '';
+
+            // Variabele om de totaalprijs bij te houden
+            let totalPrice = 0;
+
+            // Loop door de producten in het winkelwagentje en voeg ze toe aan de lijst
+            cart.forEach(item => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - €${item.price}`;
+                cartItems.appendChild(listItem);
+
+                // Tel de prijs bij de totaalprijs op
+                totalPrice += item.price;
+            });
+
+            // Update de totaalprijs op de pagina
+            totalPriceElement.textContent = totalPrice;
+        }
+    </script>
     </main>
     <div class="footer">
       <div>
