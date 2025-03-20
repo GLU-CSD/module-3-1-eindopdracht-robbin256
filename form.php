@@ -25,51 +25,9 @@
 <body>
     <div id="content">
         <header>
-            <div class="bovenbalk">
-                <div style="display:flex; margin-left:50px;">
-                    <div class="menuLeft">taal:</div>
-                    <select class="menuLeft" name="cars" id="cars">
-                        <option value="Nederlands">Nederlands</option>
-                        <option value="English">English</option>
-                        <option value="中國人">中國人</option>
-                        <option value="-- --- .-. ... . / -.-. --- -.. .">-- --- .-. ... . / -.-. --- -.. .</option>
-                    </select>
-                </div>
-                <div style="display:flex; margin-right:50px;">
-                    <div class="menuRight">Mijn account</div>
-                    <div class="menuRight">|</div>
-                    <a href="form.html" class="menuRight">afrekenen</a>
-                    <div class="menuRight">|</div>
-                    <div class="menuRight">Uitloggen</div>
-                </div>
-            </div>
-            <div class="onderbalk">
-                <div style="display:flex; margin-left:50px;">
-                    <img src="assets/img/BananaLogo-removebg.png" class="menuLeft" alt="LOGO">
-                </div>
-
-                <div>
-
-                    <div class="topnav">
-                        <a class="active" href="index.html">Iphones</a>
-                        <a href="ipad.html">Ipad</a>
-                        <a href="iwatch.html">Iwatch</a>
-                        <a href="mac.html">Mac</a>
-                    </div>
-
-                </div>
-
-                <div style="display:flex; margin-right:50px;">
-                    <input type="text" placeholder="Search..." />
-                    <!-- <button type="submit">🔍</button> -->
-                    <button class="menuRight">Vergelijk</button>
-                    <a href="winkelwagen.html">
-                        <button class="menuRight">Winkelwagen
-                            <div id="productAmount">1</div>
-                        </button>
-                    </a>
-                </div>
-            </div>
+            <?php
+                include 'includes/header.php';
+            ?>
         </header>
         <main>
             <div id="sidebar">
@@ -140,7 +98,7 @@
                 </script>
             </div>
             <div class="container">
-                <form action="result.html" method="get">
+                <form action="result.php" method="get">
                     <h2>JE GEGEVENS.</h2>
                     <p>Wat moet er op de factuur staan?</p>
                     <div class="form-group">
