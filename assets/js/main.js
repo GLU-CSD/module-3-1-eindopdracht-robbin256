@@ -75,8 +75,3 @@ buttons.forEach(function (button) {
 
 
 
-
-
-
-
-

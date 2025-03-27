@@ -5,9 +5,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title></title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <meta name="description" content="" />
-
+  <link rel="stylesheet" href="../assets/css/style.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../assets/css/header_footer.css?v=<?php echo time(); ?>">
+  <link rel="stylesheet" href="../assets/css/filter.css?v=<?php echo time(); ?>">
   <meta property="og:title" content="" />
   <meta property="og:type" content="" />
   <meta property="og:url" content="" />
@@ -19,23 +19,23 @@
   <link rel="apple-touch-icon" href="icon.png" />
 
   <meta name="theme-color" content="#fafafa" />
-  <script src="assets/js/main.js" defer></script>
+  <script src="../assets/js/main.js" defer></script>
 </head>
 
 <body>
   <div id="content">
     <header>
     <?php
-      include 'includes/header.php';
+      include '../includes/header.php';
     ?>
     </header>
     <main>
       <div id="sidebar">
         <?php
-          include 'includes/filter.php'
+          include '../includes/filter.php'
         ?>
       </div>
-      <div class="container">
+      <div class="container" >
       <?php
 $productName = [
   "Iphone 11","Iphone 11 Pro", "Iphone 11 Pro Max", "Iphone 12", "Iphone 12 mini", "Iphone 12 Pro",
@@ -61,14 +61,15 @@ $productDescription = [
 ];
 
 $productImg = [
-  "assets/img/phone.png","assets/img/phone.png", "assets/img/phone.png", "assets/img/phone.png",
-  "assets/img/phone.png", "assets/img/phone.png", "assets/img/phone.png",
-  "assets/img/phone.png", "assets/img/phone.png", "assets/img/phone.png",
-  "assets/img/phone.png", "assets/img/phone.png", "assets/img/phone.png",
-  "assets/img/phone.png", "assets/img/phone.png", "assets/img/phone.png",
-  "assets/img/phone.png", "assets/img/phone.png", "assets/img/phone.png",
-  "assets/img/oldPhone.png"
+  "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png",
+  "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png",
+  "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png",
+  "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png",
+  "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png",
+  "../assets/img/phone.png", "../assets/img/phone.png", "../assets/img/phone.png",
+  "../assets/img/oldPhone.png"
 ];
+
 
 
 
@@ -97,6 +98,17 @@ $productImg = [
 
       </div>
       <script>
+
+        let products = document.getElementsByClassName("product");  
+          for (let i = 0; i < products.length; i++) {
+            products[i].addEventListener("click", function () {
+                console.log([i], 'clicked');
+                window.location.href = "detailPage.php?id=" + i;
+              });
+    }
+
+
+
         // Variabele om het winkelwagentje op te slaan
         let cart = [];
 
@@ -138,12 +150,12 @@ $productImg = [
     </main>
     <footer>
       <?php
-          include 'includes/footer.php';
+          include '../includes/footer.php';
       ?>
     </footer>
   </div>
     <!-- Add your site or application content here -->
-    <script src="assets/js/app.js"></script>
+    <script src="../assets/js/app.js"></script>
 
 </body>
 

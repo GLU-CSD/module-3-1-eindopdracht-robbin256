@@ -18,13 +18,13 @@
     </div>
     <div class="onderbalk">
     <div style="display:flex; margin-left:50px;">
-        <img src="assets/img/BananaLogo-removebg.png" class="menuLeft" alt="LOGO">
+        <img src="../assets/img/BananaLogo-removebg.png" class="menuLeft" alt="LOGO">
     </div>
 
     <div>
-
+        
         <div class="topnav">
-        <a class="active" href="#home">Iphones</a>
+        <a class="active" href="../pages">Iphones</a>
         <a href="#Ipad">Ipad</a>
         <a href="Iwatch">Iwatch</a>
         <a href="#Mac">Mac</a>

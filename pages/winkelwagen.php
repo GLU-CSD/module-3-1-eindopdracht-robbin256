@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
-    <link rel="stylesheet" href="assets/css/winkelwagen.css" />
+    <link rel="stylesheet" href="../assets/css/winkelwagen.css" />
     <meta name="description" content="" />
 
     <meta property="og:title" content="" />
@@ -19,33 +19,29 @@
     <link rel="apple-touch-icon" href="icon.png" />
 
     <meta name="theme-color" content="#fafafa" />
-    <script src="assets/js/main.js" defer></script>
+    <script src="../assets/js/main.js" defer></script>
 </head>
 
 <body>
     <div id="content">
         <header>
             <?php
-                include 'includes/header.php';
+                include '../includes/header.php';
             ?>
         </header>
         <main>
             <div id="sidebar">
                 <?php
-                    include 'includes/faq.php'
+                    include '../includes/faq.php'
                 ?>
                 
             </div>
         </main>
         <footer>
             <?php
-                include 'includes/footer.php';
+                include '../includes/footer.php';
             ?>
         </footer>
     </div>
-
-    <!-- Add your site or application content here -->
-    <script src="assets/js/main.js"></script>
-
 </body>
 </html>
