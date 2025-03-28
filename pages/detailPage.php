@@ -6,7 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title></title>
   <link rel="stylesheet" href="../assets/css/style.css" />
-  <link rel="stylesheet" href="../assets/css/detailPage.css?v=<?php echo time(); ?>" />
+  <link rel="stylesheet" href="../assets/css/detailPage.css" />
+  <link rel="stylesheet" href="../assets/css/header_footer.css" />
+  <link rel="stylesheet" href="../assets/css/filter.css" />
+  
+  <script type="module" src="https://unpkg.com/@google/model-viewer@latest"></script>
   <meta name="description" content="" />
 
   <meta property="og:title" content="" />
@@ -27,7 +31,7 @@
     img{
       height: 100px;
       width: auto;
-      
+    
     }
     #big{
       height: 400px;
@@ -59,6 +63,16 @@
             <img class="thumbnail" src="../assets/img/detailPage/Iphone16_3.png" alt="">
             <img class="thumbnail" src="../assets/img/detailPage/Iphone16_4.png" alt="">
           </div>
+          <br>
+          <div>
+            <model-viewer shadow-intensity="0.5" src="../assets/iphone_16_pro_max.glb" 
+              alt="Een 3D model" 
+              auto-rotate 
+              auto-rotate-speed="2000"
+              camera-controls 
+              style="width: 200px; height: 200px;">
+          </model-viewer>
+         </div>
         </div>
         <div class="right">
           <?php
@@ -97,20 +111,23 @@
             if (isset($_GET['id'])) {
               $product_id = $_GET['id'];
               echo '<div class="onder">
-                <div>
-                  <h1>'. $productName[$product_id]. ' </h1><br>
-                  <p class="description">'. $productDescription[$product_id]. '</p>
-                </div>
-                <div>
-                  <p>'. $productPrice[$product_id]. '</p>
-                </div>
-                <button class="addProduct">Add to cart</button>
+              <h1>'. $productName[$product_id]. ' </h1>
+              <button class="addProduct">Add to cart</button>
+              <p>'. $productPrice[$product_id]. '</p>
               </div>';
             }
             ?>
-            <div class="description">
-              <p>beschrijving</p>
-            </div>
+            <br>
+            <p><b>6,1‑inch design van hoogwaardig aluminium voetnoot 1 met <br> robuust Ceramic Shield van de nieuwste generatie aan de voorkant, <br> actieknop en USB‑C</b></p>
+            <br><hr><br>
+            <p><b>Via de camera­regelaar heb je nu sneller toegang tot de camera­tools</b></p>
+            <br><hr>
+            <br>
+            <p><b>Met de enorm energiezuinige A18-chip profiteer je van baanbrekende <br> foto- en video­features en kun je gamen als op een console</b></p>
+            <br><hr><br>
+            <p><b>Een grote boost in batterijduur – tot 22 uur video afspelen voetnoot 2</b></p>
+            <br><hr><br>
+            <p><b>Maak de mooiste ruimtelijke foto’s en video’s op iPhone 16 en beleef <br> ze opnieuw op Apple Vision Pro voetnoot 3</b></p>
             <br>
             <div class="button-group">
               <h2>storage</h2>
@@ -119,6 +136,8 @@
               <button class="toggle-button" onclick="selectButton(this)">256 GB</button>
               <button class="toggle-button" onclick="selectButton(this)">512 GB</button>
             </div>
+            <br>
+
         </div>
       </div>
 
@@ -134,6 +153,7 @@
       <script>
         let thumbnails = document.getElementsByClassName("thumbnail");
         let bigImage = document.getElementById("big"); 
+
         for (let i = 0; i < thumbnails.length; i++) {
           thumbnails[i].addEventListener("click", function () {
               bigImage.src = thumbnails[i].src;
