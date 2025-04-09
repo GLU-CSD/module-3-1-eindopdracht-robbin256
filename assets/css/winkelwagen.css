@@ -345,3 +345,15 @@ button:hover {
   box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.1);
   color: black;
 }
+
+
+.removeProduct{
+  background-color: #007bff;
+  border-radius: 20px;
+  width: 200px;
+  height: 30px;
+  border: 2px solid blue;
+  padding-bottom: 25px;
+}
+
+

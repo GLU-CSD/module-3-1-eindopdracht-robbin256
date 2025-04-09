@@ -29,6 +29,11 @@
     cursor: pointer;
 }
 
+/* #big{
+    height: 400px;
+    width: auto;
+} */
+
 .right{
     display: flex;
     flex-direction: column;

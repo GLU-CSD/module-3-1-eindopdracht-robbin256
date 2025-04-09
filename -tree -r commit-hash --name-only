@@ -1,0 +1,471 @@
+[33mcommit 1dda0d6e5f5e8fa0548940a2bd1d8ef4fa32c66a[m
+Author: robbin256 <robbinvanvliet@icloud.com>
+Date:   Fri Mar 14 11:29:56 2025 +0100
+
+    week 4 eindresultaat
+
+[1mdiff --git a/assets/css/result.css b/assets/css/result.css[m
+[1mnew file mode 100644[m
+[1mindex 0000000..570d669[m
+[1m--- /dev/null[m
+[1m+++ b/assets/css/result.css[m
+[36m@@ -0,0 +1,323 @@[m
+[32m+[m[32m* {[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbody {[m
+[32m+[m[32m    margin: 0;[m
+[32m+[m[32m    padding: 0;[m
+[32m+[m[32m    background-color: #f5f5f7;[m
+[32m+[m[32m    color: #333;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.content {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mmain {[m
+[32m+[m[32m    background: #ffffff;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: row;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mheader {[m
+[32m+[m[32m    background-color: #000;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    padding: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#sidebar {[m
+[32m+[m[32m    width: 300px;[m
+[32m+[m[32m    background: #e0e0e0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#sidebar h3{[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mdetails {[m
+[32m+[m[32m    background: #f9f9f9;[m
+[32m+[m[32m    border: 1px solid #ddd;[m
+[32m+[m[32m    border-radius: 8px;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    margin: 10px;[m
+[32m+[m[32m    margin-bottom: 10px;[m
+[32m+[m[32m    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);[m
+[32m+[m[32m    transition: all 0.3s ease-in-out;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mdetails:hover {[m
+[32m+[m[32m    background: #f1f1f1;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32msummary {[m
+[32m+[m[32m    font-weight: bold;[m
+[32m+[m[32m    cursor: pointer;[m
+[32m+[m[32m    padding: 8px;[m
+[32m+[m[32m    list-style: none;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m    position: relative;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32msummary::after {[m
+[32m+[m[32m    content: "▼";[m[41m [m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m    color: #007bff;[m
+[32m+[m[32m    transition: transform 0.3s ease-in-out;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mdetails[open] summary::after {[m
+[32m+[m[32m    transform: rotate(180deg);[m[41m [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32mdetails p {[m
+[32m+[m[32m    margin-top: 8px;[m
+[32m+[m[32m    padding: 5px;[m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m    color: #444;[m
+[32m+[m[32m    transition: all 0.3s ease-in-out;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32m.container {[m
+[32m+[m[32m    background-color: #ffffff;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.bovenbalk {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    background-color: #333;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.bovenbalk .menuRight {[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m#productAmount {[m
+[32m+[m[32m    width: 20px;[m
+[32m+[m[32m    height: 20px;[m
+[32m+[m[32m    border-radius: 50%;[m
+[32m+[m[32m    background-color: red;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.bovenbalk .menuLeft {[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.onderbalk {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    background-color: #f5f5f7;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.onderbalk .menuRight {[m
+[32m+[m[32m    padding: 100px;[m
+[32m+[m[32m    padding-top: 25px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.onderbalk .menuLeft {[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.onderbalk img {[m
+[32m+[m[32m    width: 65px;[m
+[32m+[m[32m    min-width: 65px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.onderbalk .menuRight {[m
+[32m+[m[32m    background-color: #000;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    padding: 10px 20px;[m
+[32m+[m[32m    cursor: pointer;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m    height: 40px;[m
+[32m+[m[32m    margin-right: 10px;[m
+[32m+[m[32m    margin-top: 22px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.menuRight:hover {[m
+[32m+[m[32m    background-color: #555;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.onderbalk input {[m
+[32m+[m[32m    height: 40px;[m
+[32m+[m[32m    margin-top: 22px;[m
+[32m+[m[32m    margin-right: 10px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.item img {[m
+[32m+[m[32m    height: 50%;[m
+[32m+[m[32m    width: auto;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Algemene container styling */[m
+[32m+[m[32m.container {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: center;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    padding: 20px;[m
+[32m+[m[32m    max-width: 600px;[m
+[32m+[m[32m    margin: auto;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Koppen */[m
+[32m+[m[32mh2, h3 {[m
+[32m+[m[32m    color: #007bff;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Paragraafstijl */[m
+[32m+[m[32mp {[m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m    color: #555;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Formulier groepen */[m
+[32m+[m[32m.form-group {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    margin-bottom: 15px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.bold {[m
+[32m+[m[32m    font-weight: bold;[m
+[32m+[m[32m    margin-bottom: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Invoervelden en select */[m
+[32m+[m[32m.form-group input,[m
+[32m+[m[32m.form-group select {[m
+[32m+[m[32m    padding: 8px;[m
+[32m+[m[32m    border: 1px solid #ccc;[m
+[32m+[m[32m    border-radius: 4px;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    font-size: 14px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Radio button groep */[m
+[32m+[m[32m.radio-group {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    gap: 20px;[m
+[32m+[m[32m    flex-wrap: wrap;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.radio-group label {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    align-items: center;[m
+[32m+[m[32m    gap: 5px;[m
+[32m+[m[32m    cursor: pointer;[m
+[32m+[m[32m    white-space: nowrap;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Naamvelden in een rij */[m
+[32m+[m[32m.name-fields {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    gap: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.name-fields input {[m
+[32m+[m[32m    flex: 1;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Knop styling */[m
+[32m+[m[32mbutton {[m
+[32m+[m[32m    background-color: #28a745;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m    border: none;[m
+[32m+[m[32m    border-radius: 5px;[m
+[32m+[m[32m    cursor: pointer;[m
+[32m+[m[32m    font-size: 16px;[m
+[32m+[m[32m    width: 100%;[m
+[32m+[m[32m    transition: background-color 0.3s ease;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mbutton:hover {[m
+[32m+[m[32m    background-color: #218838;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m/* Extra styling voor highlights */[m
+[32m+[m[32m.highlight {[m
+[32m+[m[32m    color: #ff6600;[m
+[32m+[m[32m    font-weight: bold;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m/* Responsieve verbeteringen */[m
+[32m+[m[32m@media (max-width: 600px) {[m
+[32m+[m[32m    .radio-group {[m
+[32m+[m[32m        flex-direction: column;[m
+[32m+[m[32m        gap: 10px;[m
+[32m+[m[32m    }[m
+[32m+[m
+[32m+[m[32m    .name-fields {[m
+[32m+[m[32m        flex-direction: column;[m
+[32m+[m[32m        gap: 10px;[m
+[32m+[m[32m    }[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m.onder {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    height: 140px;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m    padding: 5px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.linksOnder {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    flex-direction: column;[m
+[32m+[m[32m    justify-content: space-between;[m
+[32m+[m[32m    height: 140px;[m
+[32m+[m[32m    width: 50%;[m
+[32m+[m[32m    background-color: #e0e0e0;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.topnav {[m
+[32m+[m[32m    overflow: hidden;[m
+[32m+[m[32m    background-color: #000;[m
+[32m+[m[32m    margin-top: 20px;[m
+[32m+[m[32m    height: 40px;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.topnav a {[m
+[32m+[m[32m    float: left;[m
+[32m+[m[32m    color: #f2f2f2;[m
+[32m+[m[32m    text-align: center;[m
+[32m+[m[32m    padding: 10px 16px;[m
+[32m+[m[32m    text-decoration: none;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.topnav a:hover {[m
+[32m+[m[32m    background-color: #ddd;[m
+[32m+[m[32m    color: black;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.topnav a.active {[m
+[32m+[m[32m    background-color: #333;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32m.footer {[m
+[32m+[m[32m    display: flex;[m
+[32m+[m[32m    justify-content: space-around;[m
+[32m+[m[32m    background-color: #000;[m
+[32m+[m[32m    color: white;[m
+[32m+[m[32m    padding: 10px;[m
+[32m+[m[32m}[m
+\ No newline at end of file[m
+[1mdiff --git a/assets/js/main.js b/assets/js/main.js[m
+[1mindex d95a595..7d62c4a 100644[m
+[1m--- a/assets/js/main.js[m
+[1m+++ b/assets/js/main.js[m
+[36m@@ -1,18 +1,18 @@[m
+ var slider = document.getElementById("myRange");[m
+ var output = document.getElementById("demo");[m
+[31m-if (output) { [m
+[31m-  output.textContent = slider.value; [m
+[32m+[m[32mif (output) {[m
+[32m+[m[32m  output.textContent = slider.value;[m
+ [m
+[31m-  slider.oninput = function() {[m
+[31m-      output.textContent = this.value < 10 ? this.value + " (Broke)" : this.value;[m
+[32m+[m[32m  slider.oninput = function () {[m
+[32m+[m[32m    output.textContent = this.value < 10 ? this.value + " (Broke)" : this.value;[m
+   };[m
+ }[m
+ [m
+[31m-[m
+ // HTML-elementen ophalen[m
+ var productAmount = document.getElementById("productAmount");[m
+ var winkelwagen = document.getElementById("winkelwagen");[m
+ var buttons = document.querySelectorAll(".addProduct");[m
+[32m+[m[32mvar removeButtons = document.querySelectorAll(".removeProduct");[m
+ [m
+ // Ophalen van opgeslagen productCount uit localStorage (of 0 als er niets is)[m
+ let productCount = localStorage.getItem("productCount") ? parseInt(localStorage.getItem("productCount")) : 0;[m
+[36m@@ -38,51 +38,37 @@[m [mlet productHTML = `[m
+     </div>[m
+ </div>`;[m
+ [m
+[31m-document.addEventListener("DOMContentLoaded", function() {[m
+[31m-  // Controleer of het winkelwagen-element bestaat op de huidige pagina[m
+[32m+[m[32mdocument.addEventListener("DOMContentLoaded", function () {[m
+   if (winkelwagen) {[m
+[31m-    // Controleer of er producten in de winkelwagen zitten[m
+[31m-    if (productCount == 0) {[m
+[31m-      winkelwagen.textContent = "Er is niks in je winkelwagen";  [m
+[31m-    } else {[m
+[31m-      for (let i = 0; i < productCount; i++) {[m
+[31m-        winkelwagen.insertAdjacentHTML("beforeend", productHTML); // Voeg de producten toe aan de winkelwagen[m
+[32m+[m[32m    function UpdateCard() {[m
+[32m+[m[32m      if (productCount == 0) {[m
+[32m+[m[32m        winkelwagen.textContent = "Er is niks in je winkelwagen";[m
+[32m+[m[32m      } else {[m
+[32m+[m[32m        for (let i = 0; i < productCount; i++) {[m
+[32m+[m[32m          winkelwagen.insertAdjacentHTML("beforeend", productHTML);[m
+[32m+[m[32m        }[m
+       }[m
+     }[m
+[31m-[m
+[31m-[m
+[31m-    removeButtons.forEach(function (removeButton) {[m
+[31m-      removeButton.addEventListener("click", function () {[m
+[31m-        productCount -= 1; // Verminder het aantal producten[m
+[31m-        localStorage.setItem("productCount", productCount); // Sla het nieuwe aantal op in localStorage[m
+[31m-        console.log("remove prodcu")[m
+[31m-        if (productCount === 0) {[m
+[31m-          winkelwagen.textContent = "Er is niks in je winkelwagen";  // Laat een bericht zien als de winkelwagen leeg is[m
+[31m-        }[m
+[31m-      });[m
+[32m+[m[32m    UpdateCard()[m
+[32m+[m
+[32m+[m[32m    document.addEventListener("click", function (event) {[m
+[32m+[m[32m      if (event.target.classList.contains("removeProduct")) {[m[41m [m
+[32m+[m[32m        productCount -= 1;[m
+[32m+[m[32m        winkelwagen.innerHTML = ""[m
+[32m+[m[32m        productAmount.textContent = productCount;[m
+[32m+[m[32m        localStorage.setItem("productCount", productCount);[m
+[32m+[m[32m        UpdateCard()[m
+[32m+[m[32m      }[m
+     });[m
+[31m-[m
+[31m-[m
+[31m-    // Functie voor het verwijderen van producten[m
+[31m-    function updateRemoveButtons() {[m
+[31m-      console.log("remove product")[m
+[31m-      let removeButtons = document.querySelectorAll(".removeProduct");[m
+[31m-[m
+[31m-[m
+[31m-    }[m
+[31m-[m
+[31m-    updateRemoveButtons(); // Zet de verwijderfunctionaliteit aan[m
+   }[m
+ });[m
+ [m
+[31m-// Eventlistener toevoegen aan alle "Add to cart"-knoppen[m
+ buttons.forEach(function (button) {[m
+   button.addEventListener("click", function () {[m
+     productCount += 1; // Totaal aantal producten verhogen[m
+     productAmount.textContent = productCount; // Updaten in de HTML[m
+     localStorage.setItem("productCount", productCount); // Opslaan in localStorage[m
+     winkelwagen.insertAdjacentHTML("beforeend", productHTML); // Voeg het product toe aan de winkelwagen[m
+[31m-    updateRemoveButtons(); // Verwijderknoppen opnieuw instellen[m
+   });[m
+ });[m
+ [m
+[1mdiff --git a/assets/js/winkelwagen.js b/assets/js/winkelwagen.js[m
+[1mdeleted file mode 100644[m
+[1mindex 97d6d3d..0000000[m
+[1m--- a/assets/js/winkelwagen.js[m
+[1m+++ /dev/null[m
+[36m@@ -1,31 +0,0 @@[m
+[31m-var winkelwagen = document.getElementById("winkelwagen");[m
+[31m-[m
+[31m-let items = 5;[m
+[31m-let productHTML = `[m
+[31m-<div class="product">[m
+[31m-    <div class="boven">[m
+[31m-        <img src="assets/img/phone.png" alt="Phone">[m
+[31m-    </div>[m
+[31m-    <div class="onder">[m
+[31m-        <div>[m
+[31m-            <p>Iphone 11 Pro</p><br>[m
+[31m-            <p class="description">Iphone 11 but only for professionals</p>[m
+[31m-        </div>[m
+[31m-        <div>[m
+[31m-            <p>510,-</p>[m
+[31m-        </div>[m
+[31m-    </div>[m
+[31m-</div>`;[m
+[31m-[m
+[31m-if (items == 0){[m
+[31m-    winkelwagen.textContent = "Er is niks in je winkelwagen"  [m
+[31m-} else{[m
+[31m-    console.log("Aantal producten in winkelwagen:", window.productAmount);[m
+[31m-[m
+[31m-    for (let i = 0; i < items; i++) {   [m
+[31m-        winkelwagen.insertAdjacentHTML("beforeend", productHTML);[m
+[31m-    }[m
+[31m-}[m
+[31m-alert("test")[m
+[31m-[m
+[31m-[m

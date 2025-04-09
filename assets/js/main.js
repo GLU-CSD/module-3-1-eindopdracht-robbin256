@@ -11,8 +11,7 @@ if (output) {
 // HTML-elementen ophalen
 var productAmount = document.getElementById("productAmount");
 var winkelwagen = document.getElementById("winkelwagen");
-var buttons = document.querySelectorAll(".addProduct");
-var removeButtons = document.querySelectorAll(".removeProduct");
+// var removeButtons = document.querySelectorAll(".removeProduct");
 
 // Ophalen van opgeslagen productCount uit localStorage (of 0 als er niets is)
 let productCount = localStorage.getItem("productCount") ? parseInt(localStorage.getItem("productCount")) : 0;
@@ -38,39 +37,34 @@ let productHTML = `
     </div>
 </div>`;
 
-document.addEventListener("DOMContentLoaded", function () {
-  if (winkelwagen) {
-    function UpdateCard() {
-      if (productCount == 0) {
-        winkelwagen.textContent = "Er is niks in je winkelwagen";
-      } else {
-        for (let i = 0; i < productCount; i++) {
-          winkelwagen.insertAdjacentHTML("beforeend", productHTML);
-        }
-      }
-    }
-    UpdateCard()
+// document.addEventListener("DOMContentLoaded", function () {
+//   if (winkelwagen) {
+//     function UpdateCard() {
+//       if (productCount == 0) {
+//         winkelwagen.textContent = "Er is niks in je winkelwagen";
+//       } else {
+//         for (let i = 0; i < productCount; i++) {
+//           winkelwagen.insertAdjacentHTML("beforeend", productHTML);
+//         }
+//       }
+//     }
+//     // UpdateCard()
 
-    document.addEventListener("click", function (event) {
-      if (event.target.classList.contains("removeProduct")) { 
-        productCount -= 1;
-        winkelwagen.innerHTML = ""
-        productAmount.textContent = productCount;
-        localStorage.setItem("productCount", productCount);
-        UpdateCard()
-      }
-    });
-  }
-});
+//     document.addEventListener("click", function (event) {
+//       if (event.target.classList.contains("removeProduct")) { 
+//         productCount -= 1;
+//         winkelwagen.innerHTML = ""
+//         productAmount.textContent = productCount;
+//         localStorage.setItem("productCount", productCount);
+//         UpdateCard()
+//       }
+//     });
+//   }
+// });
 
-buttons.forEach(function (button) {
-  button.addEventListener("click", function () {
-    productCount += 1; // Totaal aantal producten verhogen
-    productAmount.textContent = productCount; // Updaten in de HTML
-    localStorage.setItem("productCount", productCount); // Opslaan in localStorage
-    winkelwagen.insertAdjacentHTML("beforeend", productHTML); // Voeg het product toe aan de winkelwagen
-  });
-});
+
+
+
 
 
 
