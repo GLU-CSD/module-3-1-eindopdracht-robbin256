@@ -88,31 +88,32 @@ session_start();
                     "Iphone 16",
                     "Iphone 16 Pro",
                     "Iphone 16 Pro Max",
-                    "Iphone 30 (From 2030)"
+                    "Iphone 30"
                 ];
 
                 $productPrice = [
-                    "499,-",
-                    "510,-",
-                    "549,-",
-                    "530,-",
-                    "430,-",
-                    "549,-",
-                    "570,-",
-                    "650,-",
-                    "649,-",
-                    "660,-",
-                    "690,-",
-                    "710,-",
-                    "749,-",
-                    "950,-",
-                    "975,-",
-                    "999,-",
-                    "1075,-",
-                    "1130,-",
-                    "1200,-",
-                    "1.000.000,-"
+                    499,
+                    510,
+                    549,
+                    530,
+                    430,
+                    549,
+                    570,
+                    650,
+                    649,
+                    660,
+                    690,
+                    710,
+                    749,
+                    950,
+                    975,
+                    999,
+                    1075,
+                    1130,
+                    1200,
+                    1000000
                 ];
+
 
                 $productDescription = [
                     "This phone is great",
@@ -160,30 +161,36 @@ session_start();
                     "../assets/img/oldPhone.png"
                 ];
 
-    
+
                 if (isset($_SESSION["producten_ids"])) {
                     foreach ($_SESSION["producten_ids"] as $index => $id) {
-                        echo "Product ID: " . $id . "<br>";
                         echo '
                         <div class="product">
-                            <div class="boven">
-
+                            <div class="links">
                                 <img src="' . $productImg[$id] . '" alt="Phone">
                             </div>
-                            <div class="onder">
+                            <div class="midden">
                                 <div>
-                                    <p>' . $productName[$id] . ' </p><br>
-                                    <p class="description">' . $productDescription[$id] . '</p>
+                                    <br>
+                                    <p><b>6,1‑inch design van hoogwaardig aluminium voetnoot 1 met <br> robuust Ceramic Shield van de nieuwste generatie aan de voorkant, actieknop en USB‑C</b></p>
+                                    <br>
+                                    <p><b>Via de camera­regelaar heb je nu sneller toegang tot de camera­tools</b></p>
+                                    <br>
+                                    <p><b>Met de enorm energiezuinige A18-chip profiteer je van baanbrekende <br> foto- en video­features en kun je gamen als op een console</b></p>
+                                    <br>
+                                    <p><b>Een grote boost in batterijduur – tot 22 uur video afspelen voetnoot 2</b></p>
+                                    <br>
+                                    <p><b>Maak de mooiste ruimtelijke foto’s en video’s op ' . $productName[$id] . ' en beleef <br> ze opnieuw op Apple Vision Pro voetnoot 3</b></p>
+                                    <br>
                                 </div>
-                                <div>
-                                    <p>' . $productPrice[$id] . '</p>
-                                </div>
-                                <div>
-                                    <a href="removeFromCart.php?id=' . $index . '"> 
-                                        <button class="removeProduct1">remove</button>
-                                    </a>
-                                    <button class="removeProduct">Verwijder uit winkelmand</button>                               
-                                </div>
+                            </div>
+                            <div class="rechts">
+                                <h1>' . $productName[$id] . ' </h1>
+                                <p>' . $productDescription[$id] . ' <p>
+                                <h2>' . $productPrice[$id] . ',-</h2>
+                                <a href="removeFromCart.php?id=' . $index . '"> 
+                                    <button class="removeProduct">Verwijder uit winkeland</button>
+                                </a>
                             </div>
                         </div>';
                     }
@@ -191,22 +198,48 @@ session_start();
                     echo "Geen producten in winkelwagen.";
                 }
                 ?>
+                <div class="kosten">
+                    <h2>🛒 Winkelmand</h2>
+                    <div id="cart"></div>
 
+                    <div class="total-section">
+                        <div class="prices">
+                            <p><strong>Totaal (excl. BTW):</strong> €<span id="totalExcl">0.00</span></p>
+                            <p><strong>Totaal (incl. 21% BTW):</strong> €<span id="totalIncl">0.00</span></p>
+                        </div>
+                        <button class="checkout-btn">Afrekenen</button>
+                    </div>
 
+                    <script>
+                        // PHP geeft array als JSON aan JavaScript
+                        const cartItems = <?php echo json_encode(array_values($producten_ids)); ?>;
+                        let productName = <?php echo json_encode($productName); ?>;
+                        let productPrice = <?php echo json_encode($productPrice); ?>;
+                        const cartDiv = document.getElementById('cart');
+                        let totalExcl = 0;
+
+                        cartItems.forEach(item => {
+                            totalExcl += productPrice[item];
+                            const line = document.createElement("div");
+                            line.classList.add("product-line");
+
+                            line.innerHTML = `
+                            <span>${productName[item]}</span>
+                            <span>€${productPrice[item]},-</span>
+                            `;
+
+                            cartDiv.appendChild(line);
+                        });
+
+                        const btw = totalExcl * 0.21;
+                        const totalIncl = totalExcl + btw;
+
+                        document.getElementById("totalExcl").textContent = totalExcl;
+                        document.getElementById("totalIncl").textContent = totalIncl;
+                    </script>
+                </div>
             </div>
         </main>
-
-        <script>
-        let removeButtons = document.getElementsByClassName("removeProduct");
-        console.log(removeButtons)
-        for (let i = 0; i < removeButtons.length; i ++)
-            removeButtons[i].addEventListener("click", function() {
-            // console.log(i);
-            // window.location.href = "removeFromCart.php?index=" + i;
-        })
-            
-
-        </script>
         <footer>
             <?php
             include '../includes/footer.php';

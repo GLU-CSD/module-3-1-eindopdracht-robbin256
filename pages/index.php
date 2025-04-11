@@ -87,7 +87,7 @@ session_start();
           "Iphone 16",
           "Iphone 16 Pro",
           "Iphone 16 Pro Max",
-          "Iphone 30 (From 2030)"
+          "Iphone 30"
         ];
 
         $productPrice = [

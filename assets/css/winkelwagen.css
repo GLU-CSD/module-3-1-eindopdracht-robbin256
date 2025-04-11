@@ -165,6 +165,7 @@ details p {
 
 
 
+
 h2,
 h3 {
     color: #007bff;
@@ -222,7 +223,7 @@ p {
     /* width: 500px; */
     white-space: nowrap;
     /* Zorgt dat de tekst niet onder de radio button komt */
-
+    
 }
 
 
@@ -253,19 +254,6 @@ button:hover {
 .highlight {
     color: #ff6600;
     font-weight: bold;
-}
-
-
-
-
-
-
-.onder {
-    display: flex;
-    flex-direction: column;
-    height: 140px;
-    justify-content: space-between;
-    padding: 5px;
 }
 
 .linksOnder {
@@ -318,27 +306,62 @@ button:hover {
     padding: 20px;
     margin: 20px;
     gap: 50px;
-  }
+}
 
 .product {
-  max-width: 200px;
-  max-height: 334px;
-  min-width: 190px;
-  height: 300px;
-  background-color: white;
-  padding: 1em;
-  font-weight: 700;
-  color: black;
-  text-align: center;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  transition: box-shadow 0.3s ease;
-  margin-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    max-width: 1000px;
+    /* max-height: 200px; */
+    min-width: 1000px;
+    height: 250px;
+    background-color: #dedcdc;
+    padding: 1em;
+    font-weight: 700;
+    color: black;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.links{
+
+    background-color: #dedcdc;
+    justify-content: left;
+    width: 190px;
+    height: auto;
+    margin-top: 10px;
+}
+
+.links img{
+    width: 180px;
+}
+
+.midden {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    height: 250px;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.rechts {
+    text-align: center;
+    justify-content:  right;
+    background-color: #dedcdc;
+    display: flex;
+    flex-direction: column;
+    height: 220px;
+    justify-content: space-between;
+    padding: 5px;
 }
 
 .description{
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 11px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
 }
 
 .product:hover {
@@ -356,4 +379,65 @@ button:hover {
   padding-bottom: 25px;
 }
 
+.removeProduct:hover{
+    background-color: #588afc;
+}
+
+
+.kosten{
+    justify-content: space-evenly;
+    max-width: 1000px;
+    min-width: 1000px;
+    height: 250px;
+    background-color: #dedcdc;
+    padding: 1em;
+    font-weight: 700;
+    color: black;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    transition: box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+
+.product-line {
+display: flex;
+justify-content: space-between;
+border-bottom: 1px solid #eee;
+padding: 8px 0;
+}
+
+
+.total-section {
+display: flex;
+justify-content: space-between;
+margin-top: 25px;
+font-size: 1.1em;
+color: black;
+}
+
+.total-section p{
+    color: black;
+    font-size: 20px;
+}
+
+.prices{
+    justify-content: left;
+}
+
+.checkout-btn {
+width: 200px;
+justify-content: right;
+margin-top: 15px;
+padding: 10px 20px;
+background-color: #007bff;
+border: 2px solid blue;
+color: white;
+border-radius: 20px;
+cursor: pointer;
+}
+
+.checkout-btn:hover{
+    background-color: #588afc;
+}
 

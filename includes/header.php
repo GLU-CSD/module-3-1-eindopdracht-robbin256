@@ -43,3 +43,17 @@
     </a>
     </div>
 </div>
+
+<?php
+$producten_ids = $_SESSION["producten_ids"] ?? []; // fallback naar lege array
+?>
+<script>
+    // Zet PHP-array om naar JavaScript-array
+    let productenIds = <?php echo json_encode(array_values($producten_ids)); ?>;
+    console.log(productenIds)
+    console.log(productenIds.length)
+    let productCount = productenIds.length;
+
+    console.log(productCount); // Ter controle
+    document.getElementById("productAmount").textContent = productCount;
+</script>
