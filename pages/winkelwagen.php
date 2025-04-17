@@ -6,18 +6,20 @@ session_start();
 <!DOCTYPE html>
 <html class="no-js" lang="">
 
-<head>
+<head> 
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title></title>
     <link rel="stylesheet" href="../assets/css/winkelwagen.css" />
+    <link rel="stylesheet" href="../assets/css/header_footer.css" />
+    <link rel="stylesheet" href="../assets/css/faq.css" />
     <meta name="description" content="" />
 
     <meta property="og:title" content="" />
     <meta property="og:type" content="" />
     <meta property="og:url" content="" />
     <meta property="og:image" content="" />
-    <meta property="og:image:alt" content="" />
+    <meta property="og:image:alt" content="" />  
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -207,7 +209,9 @@ session_start();
                             <p><strong>Totaal (excl. BTW):</strong> €<span id="totalExcl">0.00</span></p>
                             <p><strong>Totaal (incl. 21% BTW):</strong> €<span id="totalIncl">0.00</span></p>
                         </div>
-                        <button class="checkout-btn">Afrekenen</button>
+                        <a href="form.php">
+                            <button class="checkout-btn">Afrekenen</button>
+                        </a>
                     </div>
 
                     <script>

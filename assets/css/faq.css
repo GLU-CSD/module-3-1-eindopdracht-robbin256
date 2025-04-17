@@ -1,0 +1,55 @@
+
+#sidebar {
+    width: 300px;
+    background: #e0e0e0;
+}
+
+#sidebar h3{
+    text-align: center;
+}
+
+details {
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    margin-bottom: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+details:hover {
+    background: #f1f1f1;
+}
+
+summary {
+    font-weight: bold;
+    cursor: pointer;
+    padding: 8px;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+summary::after {
+    content: "▼"; /* Pijltje */
+    font-size: 14px;
+    color: #007bff;
+    transition: transform 0.3s ease-in-out;
+}
+
+details[open] summary::after {
+    transform: rotate(180deg); /* Pijltje draait */
+}
+
+
+details p {
+    margin-top: 8px;
+    padding: 5px;
+    font-size: 14px;
+    color: #444;
+    transition: all 0.3s ease-in-out;
+}

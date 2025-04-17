@@ -4,7 +4,13 @@
     <p>betaal in Veiligheid met onze partners</p>
 </div>
 
-<div><b>leveringskosten</b></div>
+<div>
+    <b>Leveringskosten</b>
+    <ul>
+        <li>Transport tarieven</li>
+    </ul>
+
+</div>
 <div>
     <b>Klantenservice</b>
     <ul>
@@ -24,3 +30,5 @@
     </ul>
 </div>
 </div>
+
+<p>Website door Robbin van Vliet</p>

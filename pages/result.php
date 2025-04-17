@@ -1,3 +1,8 @@
+<?php
+// Start the session
+session_start();
+?>
+
 <!DOCTYPE html>
 <html class="no-js" lang="">
 
@@ -36,11 +41,12 @@
                 ?>
             </div>
             <div class="container">
-                <h2>Jouw Gegevens</h2>
                 <div class="resultaat">
+                    <p> Beste <span id="naam"></span>,</p>
+                    <br>
+                    <p>Bedankt voor uw bestelling bij banana.com.</p>
                     <p><strong>Type bestelling:</strong> <span id="bestelling"></span></p>
                     <p><strong>Aanhef:</strong> <span id="aanhef"></span></p>
-                    <p><strong>Naam:</strong> <span id="naam"></span></p>
                     <p><strong>Postcode:</strong> <span id="postcode"></span></p>
                     <p><strong>Adres:</strong> <span id="adres"></span></p>
                     <p><strong>E-mailadres:</strong> <span id="email"></span></p>

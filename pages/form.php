@@ -43,11 +43,11 @@
                         <label class="bold">Type bestelling:</label>
                         <div class="radio-group">
                             <label for="particulier">
-                                <input type="radio" id="particulier" name="bestelling" value="Particulier">
+                                <input type="radio" id="particulier" name="bestelling" value="Particulier" required>
                                 Particulier
                             </label>
                             <label for="zakelijk">
-                                <input type="radio" id="zakelijk" name="bestelling" value="Zakelijk">
+                                <input type="radio" id="zakelijk" name="bestelling" value="Zakelijk" required>
                                 Zakelijk
                             </label>
                         </div>
@@ -56,11 +56,11 @@
                         <label class="bold">Aanhef:</label>
                         <div class="radio-group">
                             <label for="dhr">
-                                <input type="radio" id="dhr" name="aanhef" value="Dhr.">
+                                <input type="radio" id="dhr" name="aanhef" value="Dhr." required>
                                 Dhr.
                             </label>
                             <label for="mevr">
-                                <input type="radio" id="mevr" name="aanhef" value="Mevr.">
+                                <input type="radio" id="mevr" name="aanhef" value="Mevr." required>
                                 Mevr.
                             </label>
                         </div>
@@ -80,7 +80,7 @@
                     <div class="form-group">
                         <label class="bold">Adres:</label>
                         <input type="text" name="adres" placeholder="Straatnaam" required>
-                        <input type="number" name="huisnummer" placeholder="Huisnummer">
+                        <input type="number" name="huisnummer" placeholder="Huisnummer" required>
                         <input type="text" name="toev" placeholder="Toev.">
                     </div>
 
@@ -91,23 +91,23 @@
 
                     <div class="form-group">
                         <label class="bold">Telefoonnummer:</label>
-                        <input type="tel" name="telefoon" placeholder="06-12345678">
+                        <input type="tel" name="telefoon" placeholder="06-12345678" required>
                     </div>
 
                     <div class="form-group">
                         <label class="bold">Geboortedatum:</label>
-                        <input type="date" name="geboortedatum">
+                        <input type="date" name="geboortedatum" required>
                     </div>
 
                     <div class="form-group">
                         <label class="bold">Verzendwijze factuur:</label>
                         <div class="radio-group">
                             <label for="email">
-                                <input type="radio" id="email" name="factuur" value="email">
+                                <input type="radio" id="email" name="factuur" value="email" required>
                                 Factuur per e-mail
                             </label>
                             <label for="geprint">
-                                <input type="radio" id="geprint" name="factuur" value="geprint">
+                                <input type="radio" id="geprint" name="factuur" value="geprint" required>
                                 Factuur geprint bij bestelling
                             </label>
                         </div>

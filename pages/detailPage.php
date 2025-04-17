@@ -5,7 +5,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title></title>
-  <link rel="stylesheet" href="../assets/css/style.css" />
   <link rel="stylesheet" href="../assets/css/detailPage.css" />
   <link rel="stylesheet" href="../assets/css/header_footer.css" />
   <link rel="stylesheet" href="../assets/css/filter.css" />
@@ -25,19 +24,6 @@
 
   <meta name="theme-color" content="#fafafa" />
   <script src="../assets/js/main.js" defer></script>
-
-
-  <style>
-    img{
-      height: 100px;
-      width: auto;
-    
-    }
-    #big{
-      height: 400px;
-      width: auto;
-    }
-    </style>
 </head>
 
 
